@@ -1,4 +1,5 @@
 import os
+import gradio as gr
 from google import genai
 
 # Sica buscará la llave de forma segura en la nube
