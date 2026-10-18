@@ -1,8 +1,9 @@
-import gradio as gr
+import os
 from google import genai
 
-# Tu clave de API y cliente
-client = genai.Client(api_key="AQ.Ab8RN6IbSPIN1MOOKrfiC6WEH5E-WftObeDVo6_QgL4XyhxjpA")
+# Sica buscará la llave de forma segura en la nube
+client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
+
 
 # Instrucciones del sistema (La esencia de tu Jarvis)
 instrucciones_sistema = """
